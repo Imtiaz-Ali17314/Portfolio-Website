@@ -3,172 +3,217 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Imtiaz | Full Stack Developer</title>
+    <!-- FontAwesome for Icons -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header>
+    <!-- Sticky Navigation -->
+    <header id="header">
       <nav>
-        <div class="left">Imtiaz's Portfolio</div>
-        <div class="right">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Services</a></li>
-            <li><a href="/">Projects</a></li>
-            <li><a href="/">Contact Me</a></li>
-          </ul>
+        <div class="brand text-gradient">Imtiaz.dev</div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <i class="fa-solid fa-bars"></i>
         </div>
       </nav>
     </header>
+
     <main>
-      <section class="firstSection">
-        <div class="leftSection">
-          Hi! I am <span class="nameColor">Imtiaz</span>
-          <div>and I am a passionate</div>
-          <span id="element"></span>
-          <div class="buttons">
-            <button class="btn">Download Resume</button>
-            <button class="btn">Visit Github</button>
+      <!-- Hero Section -->
+      <section id="home" class="hero container">
+        <div class="hero-content hidden">
+          <div class="hero-text">
+            <h2>Welcome to my digital workspace</h2>
+            <h1>Hi, I'm <span class="text-gradient">Imtiaz</span></h1>
+            <!-- Typed.js element container -->
+            <div class="typed-text"><span id="typed"></span></div>
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
           </div>
-        </div>
-        <div class="rightSection">
-          <img
-            src="image/IMG_20221013_191835__2_-removebg-preview.png"
-            alt="myImage"
-          />
+          <div class="hero-image">
+            <img src="image/IMG_20221013_191835__2_-removebg-preview.png" alt="Imtiaz Portrait" />
+          </div>
         </div>
       </section>
 
-      <hr />
+      <!-- Skills Bento Box -->
+      <section id="about" class="container">
+        <h2 class="section-title hidden">My <span class="text-gradient">Arsenal</span></h2>
+        <p class="section-subtitle hidden">Technologies and frameworks I use to bring ideas to life.</p>
+        
+        <div class="bento-grid">
+          <div class="bento-box hidden">
+            <i class="fa-brands fa-react"></i>
+            <h3>Frontend Mastery</h3>
+            <p>React, Next.js, and Vanilla JS specialized in creating blazing fast client-side applications.</p>
+          </div>
+          <div class="bento-box hidden">
+            <i class="fa-brands fa-node-js"></i>
+            <h3>Backend Engineering</h3>
+            <p>Node.js and Laravel architecture for building scalable, secure API infrastructures.</p>
+          </div>
+          <div class="bento-box hidden">
+            <i class="fa-solid fa-database"></i>
+            <h3>Database Management</h3>
+            <p>MongoDB and SQL structuring for high-performance data querying and persistence.</p>
+          </div>
+          <div class="bento-box hidden">
+            <i class="fa-brands fa-css3-alt"></i>
+            <h3>Advanced UI/UX</h3>
+            <p>Tailwind CSS and raw CSS3 styling, specializing in responsive layouts and glassmorphism.</p>
+          </div>
+        </div>
+      </section>
 
-      <section class="secondSection">
-        <span class="text-gray">What I have done so for</span>
-        <h1>Past Experiances</h1>
+      <!-- Experience Vertical Timeline -->
+      <section id="experience" class="container">
+        <h2 class="section-title hidden">Professional <span class="text-gradient">Journey</span></h2>
+        <p class="section-subtitle hidden">What I have achieved so far.</p>
+        
+        <div class="timeline">
+          <!-- Role 1 -->
+          <div class="timeline-item hidden">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2025 - Present</div>
+              <h3>Database & Backend Manager</h3>
+              <p>Architecting database schemas and securing server endpoints. Optimizing queries for large-scale SaaS platforms to ensure sub-second response times.</p>
+            </div>
+          </div>
+          <!-- Role 2 -->
+          <div class="timeline-item hidden">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2024 - 2025</div>
+              <h3>React Developer</h3>
+              <p>Developed complex, state-driven frontends. Migrated legacy codebases to React components, significantly improving maintainability and component reusability.</p>
+            </div>
+          </div>
+          <!-- Role 3 -->
+          <div class="timeline-item hidden">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2022 - 2024</div>
+              <h3>HTML/CSS Specialist</h3>
+              <p>Translated complex Figma designs into pixel-perfect, accessible, and highly responsive HTML5 templates using raw CSS and Flexbox/Grid architectures.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <div class="box">
-          <div class="vertical">
-            <img
-              class="img-top"
-              src="image/html-logo-removebg-preview.png"
-              alt="html-logo"
-            />
-            <div class="vertical-title">HTML Developer (2022-2024)</div>
-            <div class="vertical-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
-              error dicta. Eos exercitationem dolores incidunt vel fugiat nam.
-              Ipsum, dolorem. Earum blanditiis fuga dolores sunt quidem ullam
-              aut, officiis illum?
+      <!-- Project Showcase Grid -->
+      <section id="projects" class="container">
+        <h2 class="section-title hidden">Featured <span class="text-gradient">Projects</span></h2>
+        <p class="section-subtitle hidden">A selection of my best development work.</p>
+
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <div class="project-card hidden">
+            <div class="project-img">
+              <!-- Placeholder for actual project screenshot -->
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="FileFusion" />
+            </div>
+            <div class="project-info">
+              <h3>FileFusion Multi-Cloud App</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">AWS S3</span>
+              </div>
+              <p>A highly advanced SaaS platform for managing files seamlessly across multiple cloud storage providers in a single unified dashboard.</p>
+              <div class="project-links">
+                <a href="#"><i class="fa-brands fa-github"></i> Source Code</a>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
             </div>
           </div>
 
-          <div class="vertical">
-            <img
-              class="img-top"
-              src="image/react-logo-removebg-preview.png"
-              alt="react-logo"
-            />
-            <div class="vertical-title">React Developer (2024-2025)</div>
-            <div class="vertical-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
-              error dicta. Eos exercitationem dolores incidunt vel fugiat nam.
-              Ipsum, dolorem. Earum blanditiis fuga dolores sunt quidem ullam
-              aut, officiis illum?
+          <!-- Project 2 -->
+          <div class="project-card hidden">
+            <div class="project-img">
+              <img src="https://images.unsplash.com/photo-1621504450181-5d356f61d307?auto=format&fit=crop&w=800&q=80" alt="ApexCrypt OS" />
+            </div>
+            <div class="project-info">
+              <h3>ApexCrypt OS Terminal</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">HTML/CSS/JS</span>
+                <span class="tech-tag">WebSockets</span>
+                <span class="tech-tag">TradingView API</span>
+              </div>
+              <p>A professional-grade, glassmorphic cryptocurrency trading terminal featuring live Binance WebSocket feeds, custom charting, and automation logs.</p>
+              <div class="project-links">
+                <a href="#"><i class="fa-brands fa-github"></i> Source Code</a>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
             </div>
           </div>
 
-          <div class="vertical">
-            <img
-              class="img-top"
-              src="image/Tailwind-logo-removebg-preview.png"
-              alt="Tailwind-logo"
-            />
-            <div class="vertical-title">Tailwind Developer (2024-2025)</div>
-            <div class="vertical-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
-              error dicta. Eos exercitationem dolores incidunt vel fugiat nam.
-              Ipsum, dolorem. Earum blanditiis fuga dolores sunt quidem ullam
-              aut, officiis illum?
+          <!-- Project 3 -->
+          <div class="project-card hidden">
+            <div class="project-img">
+              <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=800&q=80" alt="SpeakFlow" />
+            </div>
+            <div class="project-info">
+              <h3>SpeakFlow Speech Studio</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">Web Audio API</span>
+                <span class="tech-tag">UI/UX</span>
+              </div>
+              <p>An elite, highly professional speech and pronunciation analysis studio with real-time audio visualization and feedback processing.</p>
+              <div class="project-links">
+                <a href="#"><i class="fa-brands fa-github"></i> Source Code</a>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="vertical">
-            <img
-              class="img-top"
-              src="image/nodejs-logo-removebg-preview.png"
-              alt="nodejs-logo"
-            />
-            <div class="vertical-title">Nodejs Developer (2025-2027)</div>
-            <div class="vertical-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
-              error dicta. Eos exercitationem dolores incidunt vel fugiat nam.
-              Ipsum, dolorem. Earum blanditiis fuga dolores sunt quidem ullam
-              aut, officiis illum?
-            </div>
-          </div>
-
-          <div class="vertical">
-            <img
-              id="mongodb"
-              class="img-top"
-              src="image/mongodb-logo-removebg-preview (3).png"
-              alt="MongoDB-logo"
-            />
-            <div class="vertical-title">DataBase Manager (2025-2027)</div>
-            <div class="vertical-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
-              error dicta. Eos exercitationem dolores incidunt vel fugiat nam.
-              Ipsum, dolorem. Earum blanditiis fuga dolores sunt quidem ullam
-              aut, officiis illum?
-            </div>
-          </div>
+      <!-- Contact Section -->
+      <section id="contact" class="container">
+        <div class="contact-container hidden">
+          <h2>Let's build something <span class="text-gradient">amazing.</span></h2>
+          <p>I am currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+          
+          <!-- Uses Formspree for actual email delivery -->
+          <form action="https://formspree.io/f/placeholder_change_me" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="How can I help you?" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-      <div class="footer">
-        <div class="footer-first">
-          <h3>Imtiaz's Developer Portfolio</h3>
+      <div class="container">
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
         </div>
-        <div class="footer-second">
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-        <div class="footer-third">
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-        <div class="footer-fourth">
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-rights">
-        Copyright &#169; imtiaz'sDeveloperPortfolio.com | All rights reserved
+        <p>&copy; 2026 Imtiaz. Designed & Built with pure HTML/CSS/JS.</p>
       </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
   </body>
